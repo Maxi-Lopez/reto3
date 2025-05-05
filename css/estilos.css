@@ -1,0 +1,294 @@
+/*
+#  ·················
+#  ··_______________
+#  ·/·___/·___/·___/
+#  /·/__(__··|__··)·
+#  \___/____/____/··
+#  ·················
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* -------------Variables */
+:root {
+  --green-color: #7ACC2D;
+  --white-color: white;
+  --black-color: #313337;
+
+  /* Tipografía */
+  --normal: 12px;
+
+  /* Espaciado */
+  --space: 10px;
+
+  /* Box shadow */
+  --box: 0px 0 2px 1px #e6e5e9;
+}
+
+/* -------------Base */
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: var(--normal);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* -------------Navbar */
+nav {
+  display: flex;
+  background-color: var(--green-color);
+  padding: var(--space);
+  color: var(--white-color);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding-left: 20px;
+  list-style: none;
+}
+
+nav li a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: var(--white-color);
+}
+
+/* -------------Main*/
+.main_section {
+  padding: 15%;
+  text-align: center;
+}
+
+/* --------- Products*/
+.products {
+  background-image: url("../images/curve.png");
+  background-size: cover;
+  background-position: top center;
+  padding: 5% 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  padding: var(--space);
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.product .content {
+  background-color: var(--white-color);
+  padding: var(--space);
+  box-shadow: var(--box);
+}
+
+.img_content {
+  text-align: center;
+}
+
+.img_content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------- Logos sector central */
+.logo {
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.loguitos {
+  margin-top: 20px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.loguitos .content {
+  background-color: var(--white-color);
+  padding: var(--space);
+  box-shadow: var(--box);
+}
+
+.loguitos .content h1 {
+  text-align: center;
+}
+
+.loguitos .content p {
+  text-align: left;
+}
+
+.img_logos {
+  text-align: center;
+}
+
+.loguitos .img_logos img {
+  width: 80%;   
+  max-width: 200px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --------- Menciones */
+.menciones {
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; 
+  gap: 20px;
+  overflow-x: auto; 
+}
+
+.menciones .content {
+  width: 25%;
+  box-sizing: border-box;
+  background-color: var(--white-color);
+  padding: var(--space);
+  box-shadow: var(--box);
+}
+
+/* --------- Botón principal */
+.main_button {
+  background-color: var(--green-color);
+  width: 100%;
+  padding: var(--space);
+  font-size: var(--normal);
+  color: var(--white-color);
+  border: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.main_button:hover {
+  background-color: #5e9e22;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black-color);
+  padding: 5px;
+  color: var(--white-color);
+  flex-wrap: wrap;
+}
+
+footer button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--normal);
+}
+
+footer button:hover {
+  background-color: #e6e6e6;
+}
+
+footer a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: var(--normal);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------ Diseño responsivo */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    padding: 10px 0;
+  }
+
+  .main_section {
+    padding: 10%;
+  }
+
+  .products,
+  .logo,
+  .menciones {
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+  }
+
+  .product,
+  .loguitos,
+  .menciones .content {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .main_button {
+    font-size: 14px;
+  }
+
+  footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      color: var(--black-color);
+    }
+  }
+
+
+@media (max-width: 480px) {
+  .main_section h1 {
+    font-size: 16px;
+  }
+
+  nav .brand_image img {
+    width: 120px;
+  }
+
+  .main_button {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .loguitos .content h1,
+  .menciones .content h1 {
+    font-size: 16px;
+  }
+
+  .loguitos .content p,
+  .menciones .content p {
+    font-size: 12px;
+  }
+}
+
